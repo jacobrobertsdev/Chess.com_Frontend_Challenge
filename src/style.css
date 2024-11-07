@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background-color: rgb(94, 94, 94);
+}
+
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
