@@ -1,5 +1,5 @@
 # Live Demo
-[Link](https://chess-com-frontend-challenge.vercel.app/)
+[Link to Demo](https://chess-com-frontend-challenge.vercel.app/)
 
 # Chess.com - Front End Programming Challenge
 
