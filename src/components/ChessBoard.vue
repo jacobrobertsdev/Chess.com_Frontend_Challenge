@@ -67,7 +67,6 @@ function handleClick(index) {
   width: 50vw;
   height: 50vw;
   margin: 1rem;
-  gap: 0;
 }
 
 .square {
