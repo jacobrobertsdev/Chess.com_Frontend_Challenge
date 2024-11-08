@@ -25,14 +25,14 @@
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
-    gap: .7rem;
+    gap: .6rem;
     height: 45vw;
-    width: 12rem;
+    width: 14rem;
     box-shadow: 1px 1px 10px 0px rgb(82, 82, 82);
     border-radius: 10px;
     background-color: whitesmoke;
     padding:.75rem;
-    overflow:auto;
+    overflow: auto;
     margin-top: 1rem;
 }
 
