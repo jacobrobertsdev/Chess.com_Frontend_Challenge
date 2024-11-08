@@ -21,22 +21,33 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: .85rem;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-content: flex-start;
-    justify-content: flex-start;
-    flex-wrap:wrap;
-    gap: .8rem;
+    justify-content: center;
+    gap: .7rem;
     height: 45vw;
     width: 12rem;
     box-shadow: 1px 1px 10px 0px rgb(82, 82, 82);
     border-radius: 10px;
     background-color: whitesmoke;
-    padding:1rem;
+    padding:.75rem;
     overflow:auto;
+    margin-top: 1rem;
+}
+
+li {
+    text-align: center;
+    width: 20%;
+    height: min-content;
+    background-color: white;
+    border-radius: 3px;
 }
 
 @media(max-width:640px){
     .notation-list{
         width: 80%;
+        margin-top: 0;
     }
 }
 
