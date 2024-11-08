@@ -46,7 +46,7 @@ li {
 
 @media(max-width:640px){
     .notation-list{
-        width: 80%;
+        width: 80vw;
         margin-top: 0;
     }
 }

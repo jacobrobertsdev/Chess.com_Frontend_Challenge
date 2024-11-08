@@ -83,7 +83,7 @@ function handleClick(index) {
 
 @media(max-width:640px){
   .board{
-    width: 80%;
+    width: 80vw;
     height: auto;
     aspect-ratio: 1;
   }
