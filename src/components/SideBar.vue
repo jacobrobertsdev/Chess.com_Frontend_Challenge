@@ -28,17 +28,17 @@
     justify-content: center;
     gap: .6rem;
     height: 45vw;
-    width: 20rem;
+    width: 18rem;
     border-radius: 10px;
     background-color: #252525;
-    padding: .6rem;
+    padding: 1rem;
     overflow: auto;
     margin-top: 1rem;
 }
 
 li {
     text-align: center;
-    width: 16%;
+    width: 20%;
     padding: .2rem;
     height: min-content;
     background-color: #383838;
