@@ -60,7 +60,6 @@ function handleClick(index) {
 
 <style scoped>
 .board {
-  box-shadow: 1px 1px 10px 0px rgb(82, 82, 82);
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
@@ -70,11 +69,11 @@ function handleClick(index) {
 }
 
 .square {
-  background-color: rgb(114, 168, 70);
+  background-color: #739552;
 }
 
 .lightSquare{
-  background-color: beige;
+  background-color: #ebecd0;
 }
 
 .isHighlighted{
