@@ -93,4 +93,12 @@ function handleClick(square) {
   background-color: rgb(56, 213, 252);
 }
 
+@media (max-width: 640px) {
+  .board {
+    max-width: 75vw;
+    height: 75vw;
+    aspect-ratio: 1;
+  }
+}
+
 </style>
