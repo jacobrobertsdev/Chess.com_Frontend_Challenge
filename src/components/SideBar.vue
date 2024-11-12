@@ -31,7 +31,7 @@
     background-color: #252525;
     padding: 1rem;
     overflow: auto;
-    margin-top: 1rem;
+    margin: 1rem 0rem 0rem 0rem;
 }
 
 li {
