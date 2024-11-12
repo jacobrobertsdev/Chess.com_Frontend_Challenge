@@ -12,18 +12,27 @@ function createBoard() {
   const rows = [8, 7, 6, 5, 4, 3, 2, 1];
   const columns = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
-  // Create 64 squares calculating row and column. Set algebraic notation and color properties for each square object.
-  for (let i = 0; i < 64; i++){
+  // // Create 64 squares calculating row and column. Set algebraic notation and color properties for each square object.
+  // for (let i = 0; i < 64; i++){
 
-    let row = Math.floor(i / 8);
-    let col = i % 8;
+  //   let row = Math.floor(i / 8);
+  //   let col = i % 8;
 
-    squares.value.push({
-      // highlighted: false,
-      notation: columns[col] + `${rows[row]}`,
-      light: (col + row) % 2 === 0 // Determine if dark/light square with boolean
-    })
-  }
+  //   squares.value.push({
+  //     // highlighted: false,
+  //     notation: columns[col] + `${rows[row]}`,
+  //     light: (col + row) % 2 === 0 // Determine if dark/light square with boolean
+  //   })
+  // }
+
+
+  // Use flatMap to create 64 squares with row and column combinations
+  squares.value = rows.flatMap((row, rowIndex) => 
+    columns.map((col, colIndex) => ({
+      notation: `${col}${row}`,
+      light: (colIndex + rowIndex) % 2 === 0 // Determine if dark/light square with boolean
+    }))
+  );
 }
 createBoard();
 
