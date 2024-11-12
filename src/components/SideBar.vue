@@ -43,12 +43,4 @@ li {
     border-radius: 3px;
 }
 
-@media(max-width:640px){
-    .notation-list{
-        max-height: 20%;
-        width: 80vw;
-        margin-top: 0;
-    }
-}
-
 </style>
