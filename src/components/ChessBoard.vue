@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 const emit = defineEmits(['getNotation']);
 const squares = ref([]);
-const highlightedSquare = ref(null);
+const currentSquare = ref(null);
 // let count = 0;
 
 // Initialize the chess board
@@ -38,10 +38,11 @@ createBoard();
 
 // Handle each square click
 function handleClick(square) {
+
   // Remove highlight from all squares
   // squares.value.forEach(s => s.highlighted = false);
 
-  highlightedSquare.value = square;
+  currentSquare.value = square;
 
   // // Update square.highlighted for current square using square value
   // square.highlighted = true;
@@ -61,7 +62,7 @@ function handleClick(square) {
 <div class="board">
   <div v-for="square in squares"
    :key="square.index" 
-   :class="['square', { isHighlighted:square === highlightedSquare, lightSquare:square.light }]"
+   :class="['square', { isHighlighted: square === currentSquare, lightSquare: square.light }]"
    @click="handleClick(square)"
    >
   </div>
