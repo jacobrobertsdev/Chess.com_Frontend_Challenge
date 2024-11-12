@@ -64,8 +64,10 @@ function handleClick(square) {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  width: 50vw;
+  max-width: 50vw;
   height: 50vw;
+  max-height: 90vh;
+  aspect-ratio: 1;
   margin: 1rem;
 }
 
