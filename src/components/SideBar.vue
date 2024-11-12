@@ -16,15 +16,14 @@
 
 <style scoped>
 .notation-list{
+    list-style-position: inside;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: .85rem;
+    font-size: .8rem;
     color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
-    gap: .6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content:baseline;
+    justify-items: center;
     height: 80%;
     width: 18rem;
     border-radius: 10px;
@@ -32,13 +31,13 @@
     padding: 1rem;
     overflow: auto;
     margin: 1rem 0rem 0rem 0rem;
+    gap: .6rem;
 }
 
 li {
     text-align: center;
-    width: 10%;
-    padding: .2rem 1rem;
-    margin: .5rem;
+    width: 85%;
+    padding: .2rem;
     height: min-content;
     background-color: #383838;
     border-radius: 3px;
