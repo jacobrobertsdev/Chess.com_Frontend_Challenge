@@ -25,7 +25,7 @@
     align-content: flex-start;
     justify-content: center;
     gap: .6rem;
-    height: 45vw;
+    height: 80%;
     width: 18rem;
     border-radius: 10px;
     background-color: #252525;
@@ -36,8 +36,9 @@
 
 li {
     text-align: center;
-    width: 20%;
-    padding: .2rem;
+    width: 10%;
+    padding: .2rem 1rem;
+    margin: .5rem;
     height: min-content;
     background-color: #383838;
     border-radius: 3px;
@@ -45,6 +46,7 @@ li {
 
 @media(max-width:640px){
     .notation-list{
+        max-height: 20%;
         width: 80vw;
         margin-top: 0;
     }
