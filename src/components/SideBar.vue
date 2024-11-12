@@ -1,6 +1,5 @@
 <script setup>
-
-// Receive clickedSquares array as a prop
+    // Receive clickedSquares array as a prop
     const props = defineProps({
         notations: Array
     })
@@ -8,16 +7,15 @@
 </script>
 
 <template>
-    <ul class="notation-list">
-    <li v-for="notation in notations">
-    {{ `${notation.count}. ` + notation.square }}
-    </li>
-    </ul>
+    <ol class="notation-list">
+        <li v-for="notation in notations">
+        {{ notation.square }}
+        </li>
+    </ol>
 </template>
 
 <style scoped>
 .notation-list{
-    list-style-type: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: .85rem;
     color: #ffffff;

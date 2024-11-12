@@ -3,7 +3,8 @@ import { ref } from 'vue'
 
 const emit = defineEmits(['getNotation']);
 const squares = ref([]);
-let count = 0;
+const highlightedSquare = ref(null);
+// let count = 0;
 
 // Initialize the chess board
 function createBoard() {
@@ -18,31 +19,31 @@ function createBoard() {
     let col = i % 8;
 
     squares.value.push({
-      index: i,
-      highlighted: false,
+      // highlighted: false,
       notation: columns[col] + `${rows[row]}`,
       light: (col + row) % 2 === 0 // Determine if dark/light square with boolean
     })
   }
 }
-
 createBoard();
 
 // Handle each square click
-function handleClick(index) {
+function handleClick(square) {
   // Remove highlight from all squares
-  squares.value.forEach(square => square.highlighted = false);
+  // squares.value.forEach(s => s.highlighted = false);
 
-  // Update square.highlighted for current square using index value
-  squares.value[index].highlighted = true;
+  highlightedSquare.value = square;
+
+  // // Update square.highlighted for current square using square value
+  // square.highlighted = true;
 
   // Increment count
-  count += 1;
+  // count += 1;
 
   // Emit count and notation data to use in SideBar component
   emit('getNotation', {
-    count: count,
-    square: squares.value[index].notation
+    // count: count,
+    square: square.notation
   });
 }
 </script>
@@ -51,8 +52,8 @@ function handleClick(index) {
 <div class="board">
   <div v-for="square in squares"
    :key="square.index" 
-   :class="['square', { isHighlighted:square.highlighted, lightSquare:square.light }]"
-   @click="handleClick(square.index)"
+   :class="['square', { isHighlighted:square === highlightedSquare, lightSquare:square.light }]"
+   @click="handleClick(square)"
    >
   </div>
 </div>
