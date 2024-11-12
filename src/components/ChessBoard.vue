@@ -66,7 +66,7 @@ function handleClick(square) {
   grid-template-rows: repeat(8, 1fr);
   max-width: 50vw;
   height: 50vw;
-  max-height: 90vh;
+  max-height: 95vh;
   aspect-ratio: 1;
   margin: 1rem;
 }
@@ -81,14 +81,6 @@ function handleClick(square) {
 
 .isHighlighted{
   background-color: rgb(56, 213, 252);
-}
-
-@media(max-width:640px){
-  .board{
-    width: 80vw;
-    height: auto;
-    aspect-ratio: 1;
-  }
 }
 
 </style>
