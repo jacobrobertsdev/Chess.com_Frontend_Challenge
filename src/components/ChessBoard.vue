@@ -1,16 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const emit = defineEmits(['getNotation']);
+const emit = defineEmits(["getNotation"]);
 const squares = ref([]);
 const currentSquare = ref(null);
-// let count = 0;
 
 // Initialize the chess board
 function createBoard() {
   // Row and Column values
   const rows = [8, 7, 6, 5, 4, 3, 2, 1];
-  const columns = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+  const columns = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
   // // Create 64 squares calculating row and column. Set algebraic notation and color properties for each square object.
   // for (let i = 0; i < 64; i++){
@@ -25,12 +24,11 @@ function createBoard() {
   //   })
   // }
 
-
   // Use flatMap to create 64 squares with row and column combinations
-  squares.value = rows.flatMap((row, rowIndex) => 
+  squares.value = rows.flatMap((row, rowIndex) =>
     columns.map((col, colIndex) => ({
       notation: `${col}${row}`,
-      light: (colIndex + rowIndex) % 2 === 0 // Determine if dark/light square with boolean
+      light: (colIndex + rowIndex) % 2 === 0, // Determine if dark/light square with boolean
     }))
   );
 }
@@ -38,35 +36,27 @@ createBoard();
 
 // Handle each square click
 function handleClick(square) {
-
-  // Remove highlight from all squares
-  // squares.value.forEach(s => s.highlighted = false);
-
   currentSquare.value = square;
 
-  // // Update square.highlighted for current square using square value
-  // square.highlighted = true;
-
-  // Increment count
-  // count += 1;
-
   // Emit count and notation data to use in SideBar component
-  emit('getNotation', {
-    // count: count,
-    square: square.notation
+  emit("getNotation", {
+    square: square.notation,
   });
 }
 </script>
 
 <template>
-<div class="board">
-  <div v-for="square in squares"
-   :key="square.index" 
-   :class="['square', { isHighlighted: square === currentSquare, lightSquare: square.light }]"
-   @click="handleClick(square)"
-   >
+  <div class="board">
+    <div
+      v-for="square in squares"
+      :key="square.index"
+      :class="[
+        'square',
+        { isHighlighted: square === currentSquare, lightSquare: square.light },
+      ]"
+      @click="handleClick(square)"
+    ></div>
   </div>
-</div>
 </template>
 
 <style scoped>
@@ -82,15 +72,15 @@ function handleClick(square) {
 }
 
 .square {
+  position: relative;
   background-color: #739552;
 }
 
-.lightSquare{
+.lightSquare {
   background-color: #ebecd0;
 }
 
-.isHighlighted{
+.isHighlighted {
   background-color: rgb(56, 213, 252);
 }
-
 </style>
